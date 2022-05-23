@@ -42,8 +42,8 @@ WORKDIR /usr/src/app
 RUN apt-get update && apt-get install -y wkhtmltopdf;
 
 # Upgrade pip to version 20.1+ - IMPORTANT
-RUN python3 -m pip install --upgrade pip
-RUN pip3 install ipdb
+RUN python3 -m pip install --upgrade pip==20.2.4
+RUN pip3 install ipdb 
 
 # This directory must be present for the AppSource created by our
 # first_run script. The directory only has something in it if
