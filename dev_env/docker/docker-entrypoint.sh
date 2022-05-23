@@ -3,6 +3,7 @@
 mkdir -p local
 
 echo "[ + ] Setting up SSH for remote Interpreter use"
+git config --global --add safe.directory /usr/src/app
 if [[ ! -d /usr/src/app/dev_env/docker/ssh ]]; then
     echo "Configuring SSH Daemon"
     mkdir -p /usr/src/app/dev_env/docker/ssh
